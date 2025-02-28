@@ -8,6 +8,7 @@ export function isSecretKey(keyName: string): boolean {
     'DATABRICKS_HOST',
     'OLLAMA_HOST',
     'OPENAI_HOST',
+    'OPENAI_BASE_PATH',
     'AZURE_OPENAI_ENDPOINT',
     'AZURE_OPENAI_DEPLOYMENT_NAME',
   ];
