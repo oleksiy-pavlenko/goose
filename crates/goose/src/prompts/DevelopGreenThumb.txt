@@ -1,0 +1,23 @@
+Continue developing the GreenThumb app.  
+
+Develop a GreenThumb app.  
+
+GreenThumb is a simple mobile application designed to help users discover various plants. The app consists of two screens:  
+
+### **Discover Screen:**  
+- Displays a list of plants with a small image and name, loaded from a public server:  
+  `https://trefle.io/api/v1/plants?token=VIFXq0ztN_WFUpOKWbi-XDvy1bmC2dqxVHx7u2wImvw`  
+- When a user clicks on a list item, they are taken to the **Plant Detail Screen**.  
+
+### **Plant Detail Screen:**  
+- Shows detailed information about the selected plant, including:  
+  - A larger image  
+  - The common name  
+  - The scientific name  
+- The data is fetched using this URL:  
+  `https://trefle.io/api/v1/plants/{plant_id}?token=VIFXq0ztN_WFUpOKWbi-XDvy1bmC2dqxVHx7u2wImvw`  
+- Includes a **back button** to return to the **Discover Screen**.  
+
+Develop a **Flutter macOS** app.  
+
+Do not tell me what to do - just do it using the extensions.
