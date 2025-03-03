@@ -17,7 +17,7 @@ import SettingsView, { type SettingsViewOptions } from './components/settings/Se
 import SettingsViewV2 from './components/settings_v2/SettingsView';
 import MoreModelsView from './components/settings/models/MoreModelsView';
 import ConfigureProvidersView from './components/settings/providers/ConfigureProvidersView';
-import ProviderSettings from './components/settings/providers/providers/NewProviderSettingsPage';
+import ProviderSettings from './components/settings_v2/providers/ProviderSettingsPage';
 
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -148,6 +148,12 @@ export default function App() {
     return () => {
       window.electron.off('fatal-error', handleFatalError);
     };
+  }, []);
+
+  useEffect(() => {
+    const handleSetView = (_, view) => setView(view);
+    window.electron.on('set-view', handleSetView);
+    return () => window.electron.off('set-view', handleSetView);
   }, []);
 
   const handleConfirm = async () => {
