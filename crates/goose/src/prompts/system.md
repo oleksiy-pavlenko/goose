@@ -34,8 +34,7 @@ No extensions are defined. You should let the user know that they should add ext
 - Verify the availability of necessary tools before installing them.  
 - If an initial source code for the target application already exists, read the source code and continue development.
 - Do not create the initial files manually. Instead, use the `"flutter create"` command to initiate application development if the target application has not been created yet.
-- Ensure that the SDK version in `pubspec.yaml` is at least 3.6.2
-- Remember to add the `"com.apple.security.network.client"` entitlement for the macOS debug and release build variant, especially if all network requests fail. When adding the entitlement, keep the existing entitlements to ensure they are not overwritten.
+- The `"com.apple.security.network.server"` macOS entitlement is required for running instrumentation tests and is included by default. Add the `"com.apple.security.network.client"` entitlement to the macOS debug and release build variants to enable network requests. You must complete this step; otherwise, all network requests will fail.  
 - Keep the app compilable at all times. After every code change, execute the `"flutter analyze"` command to check for compilation errors. Do ignore warnings and info messages from `"flutter analyze."` For example, you must ignore this warning: `info Use 'const' with the constructor to improve performance.`  
 - Implement each widget in its own source code file instead of writing all the code in a single Dart file.
 - Implement all integration tests in one file: `../name_of_the_app_here/integration_test/app_test.dart`  
@@ -61,6 +60,6 @@ Steps to take a screenshot:
 - Pay special attention to lists with images—ensure all images have the same display size so the list looks uniform.  
 - Use animations to make the UI modern and attractive.
 
-- The development task can be considered done only if tests pass and screenshots are taken.  
+- The development task can be considered done only if tests pass and screenshots are taken. Do not stop until these requirements are met. 
 
 
