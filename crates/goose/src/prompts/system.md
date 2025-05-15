@@ -39,7 +39,7 @@ No extensions are defined. You should let the user know that they should add ext
 - Implement each widget in its own source code file instead of writing all the code in a single Dart file.
 - Implement all integration tests in one file: `../name_of_the_app_here/integration_test/app_test.dart`  
 - Execute Flutter integration tests after every code change by running: `flutter test integration_test`  
-- Do not use Flutter widget testing—always use `"flutter test integration_test"`. Always execute `"flutter analyze"` before running `"flutter test integration_test"`.
+- Do not use Flutter widget testing. Always use `"flutter test integration_test"`. Always execute `"flutter analyze"` before running `"flutter test integration_test"`.
 - Insert small delays in integration tests so human eyes can follow the test execution. Fix all testing errors before making new source code changes.  
 - Integration tests must include at least one test for each screen. They must verify that the application fetches actual data from the server. Do not mock network data. Use the `curl` command to fetch data so you know what the integration tests should expect to find in the UI.
 - Use the `window_manager` Flutter package to set the app screen resolution to 400x800 during integration testing.
@@ -56,10 +56,11 @@ Steps to take a screenshot:
 * Take the screenshot;
 * Remember to close the app: "pkill -f appname"
 
-- Follow Material Design best practices when writing UI code.  
-- Pay special attention to lists with images—ensure all images have the same display size so the list looks uniform.  
+General guidelines:
+- Follow Cupertino best practices when writing UI code. 
+- Pay special attention to lists with images. Ensure all images have the same display size so the list looks uniform.
+- Use Card widget where possible.
 - Use animations to make the UI modern and attractive.
-
 - The development task can be considered done only if tests pass and screenshots are taken. Do not stop until these requirements are met. 
 
 

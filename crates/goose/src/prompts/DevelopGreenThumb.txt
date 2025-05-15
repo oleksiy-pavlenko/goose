@@ -18,6 +18,27 @@ GreenThumb is a simple mobile application designed to help users discover variou
   `https://trefle.io/api/v1/plants/{plant_id}?token=VIFXq0ztN_WFUpOKWbi-XDvy1bmC2dqxVHx7u2wImvw`  
 - Includes a **back button** to return to the **Discover Screen**.  
 
-Develop a **Flutter macOS** app.  
-
+Develop a Flutter macOS app.  
 Do not tell me what to do - just do it using the extensions.
+
+
+
+Develop a NASA’s Mars app.
+
+Description
+This app allows users to explore real photos taken by NASA’s Mars rovers. The user can select a rover (e.g. Curiosity, Opportunity, Spirit) and pick a Martian sol (day) or Earth date to retrieve photos from that day. The photos are displayed in an interactive gallery, where tapping on a thumbnail opens a full-screen view of the image. The app’s purpose is to provide a visual journey on Mars, letting users filter images by rover or camera and navigate through multiple pages of results. This creates an engaging experience as users witness Mars through the rovers’ eyes – a visually rich showcase of space exploration.
+API Information
+API Base URL: https://api.nasa.gov/mars-photos/api/v1/ (NASA Mars Rover Photos API)
+API key: TYbSqfYnN7gFKZQUEWXk6tHw01zkVAFJ8FYd6dBe
+
+Notable Endpoint:
+GET /rovers/{rover}/photos?sol={sol}&api_key={KEY} – retrieve photos taken by a given rover on a specific Martian sol (day)​
+
+Features
+Rover & Date Selection: Users can choose from multiple rovers and select a sol to fetch images. The UI could provide a dropdown for rovers and a sol slider for selecting the timeframe.
+Image Gallery Grid: Photos are displayed in a grid of thumbnails. This uses a grid layout to show many images at once, making good use of the desktop screen. Scrolling loads more images if available (pagination support).
+Photo Detail View: Tapping a photo opens it in full screen with details like the rover name, camera used, and date the photo was taken. Users can swipe between photos in this view (like a carousel or slideshow of the day’s images).
+Interactive UI Elements: Visually appealing touches like a loading animation (perhaps a Mars rover icon spinning while images load) and maybe a “zoom” animation when opening an image. Could also include a favorite button on the detail view to "save" favorite Mars photos locally.
+
+Develop a Flutter macOS app. 
+Do not tell me what to do - just do it using the extensions. 
